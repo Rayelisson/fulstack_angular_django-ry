@@ -1,0 +1,16 @@
+<div class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+      <div class="navbar navbar-header">
+          <a href="#" class="navbar-brand">Django Auth</a>
+      </div>
+      <div class="navbar collapse.show navbar-collapse">
+          <ul class="navbar navbar-nav">
+              <li routerLinkActive><a style="cursor: pointer;" routerLink="/profile">Profile</a></li>
+          </ul>
+          <ul class="navbar navbar-nav navbar-right">
+              <li [routerLinkActive]><a *ngIf="!isAuthenticated" style="cursor: pointer;" routerLink="/auth">Login</a></li>
+              <li style="cursor: pointer;" *ngIf="isAuthenticated"><a>Logout</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
